@@ -1,0 +1,72 @@
+
+<html>
+  <head>
+  </head>
+  <body>
+
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script>
+$(function () {
+        $('#container').highcharts({
+            title: {
+                text: 'Top Points Earned for Social Media',
+                x: -20 //center
+            },
+            subtitle: {
+                text: 'Source: Social Media',
+                x: -20
+            },
+            xAxis: {
+                categories: ['Elijah Olegnowicz', 'Javier Escobar', 'Tania Leonian', 'Juan Barragan', 'Collin Webb', 'Sheryl Boughton',
+                    'Stanley Liu', 'Samer Buna', 'Loren Barrick', 'Bonnie So']
+            },
+            yAxis: {
+                title: {
+                    text: 'Total Points'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: ' unique views'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [
+			{
+                name: 'Twitter',
+                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3,  9.6]
+            },
+			{
+                name: 'LinkedIn',
+                data: [-0.3, 0.4, 5.7, 2.3, 6.0, 3.0, 12.8, 3.1, 1.1,  12.5]
+            },
+				{
+                name: 'Quora',
+                data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 8.6, 2.5]
+            },
+			{
+                name: 'Stack Overflow',
+                data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3,  1.0]
+            },
+                {
+                    name:'Github',
+                    data: [2.9, 1.6, 11.3, 17.0, 13.5, 17.0, 18.6, 26.5, 23.3,  3.0]
+            }
+			]
+        });
+    });
+	</script>
+   </body>
+</html>
